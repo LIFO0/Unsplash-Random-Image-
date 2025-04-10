@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    text-align: center;
+    font-family: sans-serif;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image: url("./overlay.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #unsplashImage {
+    max-height: 500px;
+    transform: rotate(3deg);
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  .imageDetails {
+    background-color: black;
+    margin-top: 50px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    width: fit-content;
+  }
+
+  .imageDetails a {
+    color: #FFF;
+  }
+
+  .imageDetails a:hover {
+    color: yellow;
+  }
