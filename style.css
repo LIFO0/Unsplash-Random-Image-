@@ -16,6 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     background-image: url("./overlay.png");
     background-repeat: no-repeat;
@@ -48,4 +49,31 @@
 
   .imageDetails a:hover {
     color: yellow;
+  }
+
+  .changeImage {
+    margin: 10px;
+    padding: 0 25px;
+    height: 40px;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    color: #444;
+    font-family: "Montserrat Alternates";
+    font-weight: 500;
+    background-color: #eeeeeeb6;
+    box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+  }
+
+  .changeImage:hover {
+    transition: all 0.2s;
+    box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+    background-color: #fff;
+    
+  }
+  .time {
+    color: #fff;
+    font-family: "Montserrat Alternates";
+    font-weight: 500;
+    font-size: 128px;
   }
