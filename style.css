@@ -1,79 +1,112 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  body {
-    text-align: center;
-    font-family: sans-serif;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+body {
+  text-align: center;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
-  .overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-image: url("./overlay.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+.overlay {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-image: url("./overlay.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
-  #unsplashImage {
-    max-height: 500px;
-    transform: rotate(3deg);
-  }
+.button-container {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
 
-  h1 {
-    font-size: 56px;
-  }
+.change-button {
+  width: 36px;
+  height: 36px;
+  padding: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: none;
+  border-radius: 0;
+}
 
-  .imageDetails {
-    background-color: black;
-    margin-top: 50px;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    width: fit-content;
-  }
+/* .icon-button:hover {
+  transform: scale(1.1);
+}
 
-  .imageDetails a {
-    color: #FFF;
-  }
+.icon-button:active {
+  transform: scale(0.95);
+} */
 
-  .imageDetails a:hover {
-    color: yellow;
-  }
 
-  .changeImage {
-    margin: 10px;
-    padding: 0 25px;
-    height: 40px;
-    outline: none;
-    border: 1px solid #fff;
-    border-radius: 50px;
-    color: #444;
-    font-family: "Montserrat Alternates";
-    font-weight: 500;
-    background-color: #eeeeeeb6;
-    box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
-  }
+/* .change-button:focus,
+.author-button:focus {
+  outline: none;
+} */
 
-  .changeImage:hover {
-    transition: all 0.2s;
-    box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
-    background-color: #fff;
-    
-  }
-  .time {
-    color: #fff;
-    font-family: "Montserrat Alternates";
-    font-weight: 500;
-    font-size: 128px;
-  }
+/* .change-button use {
+  stroke: white;
+  stroke-width: 2;
+} */
+
+.author-button {
+  /* background-color: rgba(215, 210, 210, 0.5); */
+  color: white;
+  padding: 3px 15px;
+  border-radius: 20px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  /* backdrop-filter: blur(5px); */
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 300px;
+}
+
+.author-button:hover {
+  background-color: rgba(133, 133, 133, 0.7);
+}
+
+.author-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.imageDetails {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  font-size: 12px;
+}
+
+.imageDetails a {
+  color: #fff;
+  text-decoration: none;
+  
+}
+
+.time {
+  color: #fff;
+  font-family: "Montserrat Alternates";
+  font-weight: 500;
+  font-size: 128px;
+}

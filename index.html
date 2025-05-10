@@ -12,15 +12,28 @@
 </head>
 <body>
   <div class="overlay">
-    <!-- <h1>Random Unsplash Image</h1> -->
-    <div class="imageContainer">
-      <a id="imageLink" href="#">
-        <img alt="" id="unsplashImage" />
-      </a>
-    </div>
+    <div class="upper-block"></div>
     <div class="time" id="time"></div>
-    <!-- <p class="imageDetails">Photo by <a id="creator" href="#">NAME</a> on <a href="https://www.unsplash.com">Unsplash</a>!</p> -->
-    <button class="changeImage" id="changeButton" type="button">Change</button>
+    <div class="downer-block">
+      <div class="imageContainer">
+        <a id="imageLink" href="#">
+          <img alt="" id="unsplashImage" />
+        </a>
+      </div>
+      
+      <div class="button-container">
+        <svg class="change-button" id="changeButton">
+          <use href="sprites.svg#icon-refresh"></use>
+        </svg>
+        
+        <div class="author-button">
+          <svg class="author-icon" id="authorButton">
+            <use href="sprites.svg#icon-image"></use>
+          </svg>
+          <span class="imageDetails">Photo by <a id="creator" href="#" target="_blank">NAME</a> on <a id="unsplashLink" href="https://www.unsplash.com" target="_blank">Unsplash</a></span>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
