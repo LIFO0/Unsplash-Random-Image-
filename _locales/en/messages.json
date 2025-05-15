@@ -1,0 +1,11 @@
+{
+    "extentionName": {
+        "message": "Unsplash new tab"
+    },
+    "extentionDescription": {
+        "message": "Replaces the new tab with a beautiful image from Unsplash"
+    },
+    "tabTitle": {
+        "message": "New tab"
+    }
+}

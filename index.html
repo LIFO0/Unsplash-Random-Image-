@@ -1,10 +1,10 @@
-<html lang="ru">
-
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Новая вкладка</title>
+  <title></title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,29 +15,19 @@
     <div class="upper-block"></div>
     <div class="time" id="time"></div>
     <div class="downer-block">
-      <div class="imageContainer">
-        <a id="imageLink" href="#">
-          <img alt="" id="unsplashImage" />
-        </a>
-      </div>
-      
       <div class="button-container">
         <svg class="change-button" id="changeButton">
-          <use href="sprites.svg#icon-refresh"></use>
+          <use href="assets/sprite.svg#refresh_icon"></use>
         </svg>
-        
         <div class="author-button">
           <svg class="author-icon" id="authorButton">
-            <use href="sprites.svg#icon-image"></use>
+            <use href="assets/sprite.svg#image_icon"></use>
           </svg>
-          <span class="imageDetails">Photo by <a id="creator" href="#" target="_blank">NAME</a> on <a id="unsplashLink" href="https://www.unsplash.com" target="_blank">Unsplash</a></span>
+          <span class="imageDetails"><a id="imageLink" href="" target="_blank">Photo</a> by <a id="creator" href="" target="_blank">NAME</a> on <a id="unsplashLink" href="https://www.unsplash.com" target="_blank">Unsplash</a></span>
         </div>
       </div>
     </div>
   </div>
-
   <script src="script.js"></script>
-
 </body>
-
 </html>

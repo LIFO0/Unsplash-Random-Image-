@@ -1,0 +1,11 @@
+{
+    "extentionName": {
+        "message": "Новая вкладка Unsplash"
+    },
+    "extentionDescription": {
+        "message": "Заменяет новую вкладку на красивое изображение из Unsplash"
+    },
+    "tabTitle": {
+        "message": "Новая вкладка"
+    }
+}

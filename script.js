@@ -8,6 +8,11 @@ let creatorElement = document.querySelector("#creator");
 let buttonChangeImage = document.querySelector("#changeButton");
 buttonChangeImage.addEventListener("click", changeImageFunc);
 
+function setLocalizedPageTitle() {
+    const localizedTitle = chrome.i18n.getMessage("tabTitle");
+    document.title = localizedTitle || "New tab";
+}
+
 async function changeImageFunc() {
     try {
         const response = await fetch(endpoint);
@@ -20,6 +25,7 @@ async function changeImageFunc() {
         localStorage.setItem("lastCreatorName", jsonData.user.name);
         localStorage.setItem("lastImageLink", jsonData.links.html);
         localStorage.setItem("lastLoadTime", new Date().getTime().toString());
+        localStorage.setItem("lastPortfolioUrl", jsonData.user.portfolio_url);
         // imageElement.src = jsonData.urls.regular;
         document.body.style.backgroundImage = `url(${imageUrl})`;
         linkElement.setAttribute("href", jsonData.links.html);
@@ -53,6 +59,7 @@ async function loadImageOnStart() {
     const lastCreatorName = localStorage.getItem("lastCreatorName");
     const lastImageLink = localStorage.getItem("lastImageLink");
     const lastLoadTime = localStorage.getItem("lastLoadTime");
+    const lastPortfolioUrl = localStorage.getItem("lastPortfolioUrl"); 
     const now = new Date().getTime();
     const twelveHouse = 12 * 60 * 60 * 1000;
     if (lastImageUrl && lastLoadTime && (now - lastLoadTime < twelveHouse)) {
@@ -60,7 +67,8 @@ async function loadImageOnStart() {
         if (cachedImage) {
             document.body.style.backgroundImage = `url(${cachedImage})`;
             creatorElement.innerText = lastCreatorName;
-            creatorElement.setAttribute("href", lastImageLink);
+            creatorElement.setAttribute("href", lastPortfolioUrl);
+            linkElement.setAttribute("href", lastImageLink);
 
             return;
         }
@@ -69,7 +77,10 @@ async function loadImageOnStart() {
     
 }
 
-window.addEventListener("load", loadImageOnStart);
+window.addEventListener("load", () => {
+    setLocalizedPageTitle();
+    loadImageOnStart();
+});
 
 function updateTime() {
     const now = new Date();
