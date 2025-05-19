@@ -1,9 +1,15 @@
 {
     "manifest_version": 3,
-    "name": "__MSG_extentionName__",
+    "name": "Tabskin",
     "version": "1.0.0",
     "default_locale": "en",
     "description": "__MSG_extentionDescription__",
+     "icons": {
+        "16": "assets/icons/icon_16x16.png",
+        "32": "assets/icons/icon_32x32.png",
+        "48": "assets/icons/icon_48x48.png",
+        "128": "assets/icons/icon_128x128.png"
+    },
     "chrome_url_overrides": {
         "newtab": "index.html"
     },
@@ -11,5 +17,4 @@
         "storage"
     ],
     "minimum_chrome_version": "88"
-    
 }
